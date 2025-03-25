@@ -1,0 +1,69 @@
+{
+  "projects": [
+    {
+      "id": "674d",
+      "name": "Netflix",
+      "budget": "1500",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 200,
+      "services": [
+        {
+          "name": "teste1",
+          "cost": "200",
+          "description": "primeiro teste",
+          "id": "23e135a3-6f72-4c0a-9c1f-e2070f9f7274"
+        }
+      ]
+    },
+    {
+      "id": "1e8f",
+      "name": "CRUD - Gestão de clientes",
+      "budget": "6000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 600,
+      "services": [
+        {
+          "name": "banco de dados",
+          "cost": "600",
+          "description": "criação do banco",
+          "id": "aefdd17a-db86-4408-bf53-e30d11349d58"
+        }
+      ]
+    },
+    {
+      "id": "59cc",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "name": "Sistemas SASS",
+      "budget": "5000",
+      "cost": 0,
+      "services": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Design"
+    },
+    {
+      "id": "4",
+      "name": "Planejamento"
+    }
+  ]
+}

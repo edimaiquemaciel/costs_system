@@ -1,0 +1,31 @@
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid rgb(212, 208, 208);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    padding: 25px;
+    
+    h3{
+        color: #007bff;
+        margin-bottom: 10px;
+
+    }
+    p {
+        font-size: 16px;
+        color: #333;
+    }
+
+    ul {
+        padding-left: 50px;
+
+        li {
+            margin-top: 10px;
+            color: #333;
+        }
+    }
+
+
+}
+
