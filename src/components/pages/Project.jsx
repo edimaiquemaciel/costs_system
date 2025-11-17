@@ -1,5 +1,5 @@
 import styles from "./Project.module.css";
-import { parse, v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Loading from "../layout/Loading";
@@ -63,7 +63,7 @@ function Project() {
              body: JSON.stringify(project),
          })
          .then(resp => resp.json())
-         .then(data => {
+         .then(() => {
                 setShowServiceForm(false)
          })
          .catch((err) => console.log(err));
@@ -85,7 +85,7 @@ function Project() {
             body: JSON.stringify(projectUpdated),
         })
         .then((resp) => resp.json())
-        .then((data) => {
+        .then(() => {
             setProject(projectUpdated)
             setServices(serviceUpdated)
             setMessage('Serviço removido com sucesso!')

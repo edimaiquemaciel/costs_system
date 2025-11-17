@@ -1,6 +1,7 @@
 import styles from "./ProjectCard.module.css";
 import { BsPencil, BsFillTrashFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function ProjectCard({id, name, budget, category, handleRemove}){
     const remove = (e) => {
@@ -30,5 +31,12 @@ function ProjectCard({id, name, budget, category, handleRemove}){
         </div>
     )
 }
+ProjectCard.propTypes = {
+    id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+    name: PropTypes.string.isRequired,
+    budget: PropTypes.number.isRequired,
+    category: PropTypes.string.isRequired,
+    handleRemove: PropTypes.func.isRequired,
+};
 
 export default ProjectCard;

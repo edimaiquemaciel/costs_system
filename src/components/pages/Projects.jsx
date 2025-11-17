@@ -1,4 +1,3 @@
-
 import { useLocation } from "react-router-dom";
 import Container from "../layout/Container";
 import Loading from "../layout/Loading";
@@ -22,21 +21,26 @@ function Projects(){
 
     useEffect(()=>{
 
-        setTimeout(() => {
-            fetch('https://server-costs-flc3.onrender.com/projects', {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            })
-            .then((resp) => resp.json())
-            .then((data) => {
-                setProjects(data)
-                setRemoveLoading(true)
-            })
-            .catch((err)=> console.log(err)
-            )
-        }, 900)
+        fetch('https://server-costs-flc3.onrender.com/projects', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+        .then((resp) => resp.json())
+        .then(data => {
+            return new Promise(resolve => setTimeout(() => resolve(data), 300));
+        })
+        .then((data) => {
+            setProjects(data)
+            setRemoveLoading(true)
+        })
+        .catch((err)=> {
+            console.log("Erro ao carregar projetos ou acordar servidor:", err)
+            // É bom garantir que o loading seja removido mesmo em caso de erro.
+            setRemoveLoading(true) 
+            setProjectMessage('Erro ao carregar dados. Tente novamente mais tarde.')
+        })
 
     }, []);
 

@@ -3,6 +3,7 @@ import Input from "../form/Input";
 import Select from "../form/Select";
 import SubmitButton from "../form/SubmitButton";
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
 function ProjectForm({handleSubmit, btnText, projectData}) {
 
@@ -39,7 +40,6 @@ function ProjectForm({handleSubmit, btnText, projectData}) {
         },
     })
     }
-
     return (
         <form onSubmit={submit} className={styles.form}>
             <Input 
@@ -67,5 +67,11 @@ function ProjectForm({handleSubmit, btnText, projectData}) {
         </form>
     )
 }
+
+ProjectForm.propTypes = {
+    handleSubmit: PropTypes.func.isRequired,
+    btnText: PropTypes.string.isRequired,
+    projectData: PropTypes.object
+};
 
 export default ProjectForm;

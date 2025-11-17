@@ -1,5 +1,6 @@
 import { BsFillTrashFill } from 'react-icons/bs';
 import styles from '../project/ProjectCard.module.css';
+import PropTypes from 'prop-types';
 
 function ServiceCard({id, name, cost, description, handleRemove}) {
 
@@ -23,5 +24,13 @@ function ServiceCard({id, name, cost, description, handleRemove}) {
         </div>
     )
 }
+
+ServiceCard.propTypes = {
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    name: PropTypes.string.isRequired,
+    cost: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    description: PropTypes.string,
+    handleRemove: PropTypes.func.isRequired,
+};
 
 export default ServiceCard;

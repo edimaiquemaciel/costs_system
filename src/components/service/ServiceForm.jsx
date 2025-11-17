@@ -1,5 +1,6 @@
 import styles  from "../project/ProjectForm.module.css";
 import { useState } from "react";
+import PropTypes from "prop-types";
 import Input from "../form/Input";
 import SubmitButton from "../form/SubmitButton";
 
@@ -46,5 +47,11 @@ function ServiceForm({handleSubmit, btnText, projectData}) {
         </form>
     )
 }
+
+ServiceForm.propTypes = {
+    handleSubmit: PropTypes.func.isRequired,
+    btnText: PropTypes.string.isRequired,
+    projectData: PropTypes.object.isRequired,
+};
 
 export default ServiceForm;

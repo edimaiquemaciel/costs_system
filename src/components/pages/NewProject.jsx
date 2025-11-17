@@ -8,7 +8,6 @@ function NewProject(){
 
     function createPost(project){
 
-        //initialize cost and service
         project.cost = 0;
         project.services = [];
 
